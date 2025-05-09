@@ -117,8 +117,8 @@ if __name__ == '__main__':
     amazon_df = amazon_df.dropna(subset=['title'])
 
     # Save file with dynamic name
-    filename = f"../data/scrapped/amazon_{search_keyword}_data.xlsx"
-    os.makedirs('../data/scrapped', exist_ok=True)
+    filename = f"./data/scrapped/amazon_{search_keyword}_data.xlsx"
+    os.makedirs('./data/scrapped', exist_ok=True)
     amazon_df.to_excel(filename, index=False)
 
     print(f"\n✅ Scraping Completed. Saved {len(amazon_df)} products to {filename}")

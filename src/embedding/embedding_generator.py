@@ -5,7 +5,7 @@ import sys
 import requests
 import pandas as pd
 import numpy as np
-from openai import OpenAI
+# from openai import OpenAI
 from transformers import AutoTokenizer, AutoModel
 import torch
 import pandas as pd
