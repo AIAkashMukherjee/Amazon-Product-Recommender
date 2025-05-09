@@ -1,0 +1,10 @@
+pandas
+bs4
+requests
+openai
+torch
+transformers
+pinecone
+sentence-transformers
+streamlit
+groq
