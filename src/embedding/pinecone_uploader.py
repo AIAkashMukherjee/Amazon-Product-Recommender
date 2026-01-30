@@ -4,38 +4,10 @@ import numpy as np
 from dotenv import load_dotenv
 import os
 load_dotenv()
-# from src.constants.constant import *
+
 
 pinecone_api=os.getenv('PINECONE_API_KEY')
 PINECONE_INDEX_NAME='product-recommend'
-# Initialize Pinecone
-# pinecone.init(api_key=pinecone_api, environment='us-east-1')
-
-# # Create or connect to an index
-# index_name = PINECONE_INDEX_NAME
-# if index_name not in pinecone.list_indexes():
-#     pinecone.create_index(index_name, dimension=1536)  # Dim of embeddings
-
-# # Connect to the index
-# index = pinecone.Index(index_name)
-
-# # Load the embeddings and product data
-
-
-# # Prepare data for insertion
-# ids = [str(i) for i in range(len(embeddings_df))]
-# embeddings = embeddings_df.values.tolist()
-# metadata = product_data.to_dict(orient='records')
-
-# # Insert the data into Pinecone
-# batch_size = 100  # For efficient uploads
-# for i in range(0, len(embeddings), batch_size):
-#     index.upsert(
-#         vectors=list(zip(ids[i:i+batch_size], embeddings[i:i+batch_size], metadata[i:i+batch_size]))
-#     )
-
-# print("Embeddings uploaded to Pinecone!")
-
 
 # Initialize Pinecone
 pc = Pinecone(api_key=pinecone_api)

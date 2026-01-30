@@ -89,7 +89,7 @@ def clean_dataframe(df):
 def save_clean_data(df, save_path):
     """Save cleaned DataFrame to CSV"""
     df.to_csv(save_path, index=False)
-    print(f"✅ Cleaned data saved to {save_path}")
+    print(f"Cleaned data saved to {save_path}")
 
 def main():
     # Input and output paths
@@ -98,11 +98,11 @@ def main():
     
     # Load
     df = load_data(raw_file_path)
-    print(f"📥 Loaded data: {df.shape[0]} rows")
+    print(f"Loaded data: {df.shape[0]} rows")
     
     # Clean
     df_clean = clean_dataframe(df)
-    print(f"🧹 Cleaned data: {df_clean.shape[0]} rows (no nulls, no blanks)")
+    print(f"Cleaned data: {df_clean.shape[0]} rows (no nulls, no blanks)")
     
     # Save
     save_clean_data(df_clean, clean_file_path)

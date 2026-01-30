@@ -1,5 +1,3 @@
-# src/retriever.py
-
 from pinecone import Pinecone
 import pandas as pd
 from typing import List
@@ -15,12 +13,6 @@ PINECONE_INDEX_NAME = 'product-recommend'
 class ProductRetriever:
     def __init__(self,  pinecone_api_key: str = PINECONE_API_KEY, 
                  index_name: str = PINECONE_INDEX_NAME,  embedding_model_name: str = "all-MiniLM-L6-v2"):
-        # Initialize Pinecone
-        # pinecone.init(api_key=pinecone_api_key)
-        # self.index = pinecone.Index(index_name)
-        
-        # # Load embedding model
-        # self.embedder = SentenceTransformer(embedding_model_name)
 
         self.pinecone = Pinecone(api_key=pinecone_api_key)
         self.index = self.pinecone.Index(index_name)

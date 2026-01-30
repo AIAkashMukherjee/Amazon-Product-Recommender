@@ -1,5 +1,3 @@
-# embedding_generator.py
-
 import os
 import sys
 import requests
@@ -15,13 +13,6 @@ from tqdm import tqdm
 tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
 model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
 
-
-# Function to encode text
-# def get_embeddings(texts):
-#     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
-#     with torch.no_grad():
-#         embeddings = model(**inputs).last_hidden_state.mean(dim=1)  # Mean pooling
-#     return embeddings.numpy()
 
 def get_embeddings(texts, batch_size=32):
     """

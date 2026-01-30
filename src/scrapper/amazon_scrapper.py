@@ -121,4 +121,4 @@ if __name__ == '__main__':
     os.makedirs('./data/scrapped', exist_ok=True)
     amazon_df.to_excel(filename, index=False)
 
-    print(f"\n✅ Scraping Completed. Saved {len(amazon_df)} products to {filename}")
+    print(f"\nScraping Completed. Saved {len(amazon_df)} products to {filename}")
